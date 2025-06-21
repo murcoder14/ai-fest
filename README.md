@@ -18,7 +18,7 @@
 
 1. Install Docker Desktop by following the instructions [here](https://docs.docker.com/desktop/setup/install/windows-install/). Separate instructions are available for [Linux](https://docs.docker.com/desktop/setup/install/linux/) and [Mac](https://docs.docker.com/desktop/setup/install/mac-install/) users. 
 2. Start Docker Desktop and ensure it is up and running.
-3. Install Milvus and run it is a Docker Container by following the instructions below.
+3. Install Milvus and run it as a Docker Container by following the instructions below.
    
     Windows 
     + Create a folder, *c:\tools\milvus* in the Windows filesystem. 
@@ -37,11 +37,7 @@
    + Follow the instructions [here](https://milvus.io/docs/install_standalone-docker.md) to install and run Milvus.
 
    
-4. While this project uses OPEN AI as the LLM Provider, this project can integrate with any LLM Provider by making subtle changes within the code.  Obtain the OPENAI_API_KEY from [here](https://platform.openai.com/api-keys). The value of this key is used in the *.env* file in step 7 below and allows 
-   the Python Langchain code to connect to the LLM hosted by OPEN AI. 
-       
-   
-5. Install uv as follows.
+4. Install uv as follows.
 
    Windows 
     + Create a folder, *c:\tools\uv* in the Windows filesystem. 
@@ -54,7 +50,7 @@
 
    Linux/Mac (TODO)
    
-6. Create a Python project,*ai-fest*.
+5. Create a Python project,*ai-fest*.
    
     Windows
     + Create a folder, *c:\pythonprojects* in the Windows filesystem. 
@@ -80,15 +76,16 @@
        Hello from ai-fest!
        ```.  
 
-7. Copy the following files from GitHub location,   to the ai-fest folder. Note that the main.py has to be overwritten with the same file from the GitHub.
+6. Copy the following files from GitHub location,   to the ai-fest folder. Note that the main.py has to be overwritten with the same file from the GitHub.
     + main.py
     + simple_rag.py
     + README.md
    
-   Create a *.env* (dot env) file in the ai-fest folder and add the OPEN_API_KEY value obtained from step 4 above to it. (*Note that the key value below is shown only for illustration and does not represent an actual key*)
+   While this project uses OPEN AI as the LLM Provider, this project can integrate with any LLM Provider by making subtle changes within the code.  Obtain the OPENAI_API_KEY from [here](https://platform.openai.com/api-keys). 
+   This key enables the Langchain code to connect to the LLM hosted by OPEN AI.Create a *.env* (dot env) file in the ai-fest folder and add the OPEN_API_KEY value to it. (*Note that the key value below is shown only for illustration and does not represent an actual key*)
     + OPENAI_API_KEY=skYUacdfER34&MLOPsqzx71hlpwyuq 
 
-8. Run the application and watch Retrieval Augmented Generation in action. Review simply_rag.py to understand how RAG is implemented using Langchain.
+7. Run the application and watch Retrieval Augmented Generation in action. Review simply_rag.py to understand how RAG is implemented using Langchain.
     ```sh
     # Run the main.py. 
     c:\pythonprojects\ai-fest>uv run main.py
@@ -97,7 +94,7 @@
      If you have completed Linear Algebra Honors (MA650HO) and Multivariable Calculus Honors (MA670HO) at Choate Rosemary Hall, you are eligible to take the Applied Differential Equations, Honors (MA660HO) course.
     ```
 
-9. When all experimentation and testing have been completed, shut down the Milvus Vector Database by typing Control-C in the Windows Powershell session where Milvus was launched.
+8. When all experimentation and testing have been completed, shut down the Milvus Vector Database by typing Control-C in the Windows Powershell session where Milvus was launched.
     
 
 #### Reference Documentation
